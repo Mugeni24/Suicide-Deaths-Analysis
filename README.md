@@ -1,7 +1,12 @@
 # 🧠 Global Suicide Mortality Analysis – WHO Mortality Databases
 
+#### **Sector**: Health 🏥
+#### **Focus Area**: Global public health and mental health epidemiology.
+
 ## 🌍 Project Overview
-This project delivers a **cutting-edge analysis** of global suicide mortality trends, leveraging the **WHO Mortality Database** to uncover actionable insights. By integrating advanced data science, machine learning, and interactive visualizations, it examines patterns across time, countries, genders, and age groups, while exploring socio-economic influences. The findings aim to drive evidence-based public health strategies and foster meaningful societal impact.
+This project delivers a **cutting-edge analysis** of global suicide mortality trends, leveraging the **WHO Mortality Database** to uncover actionable insights. By integrating advanced data science, machine learning, and interactive visualizations, it examines patterns across time, countries, genders, and age groups, while exploring socio-economic influences. The findings aim to drive evidence-based public health strategies and foster meaningful societal impact. Suicide remains one of the leading causes of preventable deaths worldwide, with varying trends across regions, genders, and age groups. This project aims to analyze global suicide mortality patterns using WHO Mortality Database data, uncover socio-economic and demographic influences, and develop predictive models to support targeted public health interventions.
+
+
 
 **Core Components**:
 - **Python** 📊: For robust data processing, statistical modeling, and predictive analytics.
@@ -23,14 +28,10 @@ This project delivers a **cutting-edge analysis** of global suicide mortality tr
 - **Coverage**: Global, with country-level granularity
 - **Time Period**: 2000–2022 (varies by country) 🕰️
 - **Format**: CSV / Excel 📑
-- **Key Columns**:
-  - `Country`: Country name
-  - `Year`: Year of record
-  - `Sex`: Male / Female
-  - `Age group`: Age category
-  - `Deaths`: Number of suicide deaths
-  - `Population`: Population size
-  - `Crude rate`: Deaths per 100,000 population
+- **Number of Rows and Columns**:  18781 Rows and 17 Columns
+- **Data Structure:** Structured
+- **Data Status:** Requires preprocessing.
+
 
 ---
 
@@ -189,7 +190,7 @@ This section outlines a **systematic, reproducible workflow** executed in **Goog
 ---
 
 ### **Addressing Class Imbalance** ⚖️  
-Applied **SMOTE** to balance the dataset and improve performance.
+Applied **SMOTE**(Synthetic Minority Over-sampling Technique) to balance the dataset and improve performance.
 
 ```python
 from imblearn.over_sampling import SMOTE
@@ -397,7 +398,7 @@ This project represents a **transformative contribution** to global suicide mort
 
 ## 🙏 Reflective Verse
 *"Come unto me, all ye that labour and are heavy laden, and I will give you rest."*  
-— Mathew 11:28
+— Matthew 11:28
 
 This verse inspires hope and compassion from Jesus Christ our Lord and saviour, reminding us that if we are heavy in our hearts and feel overwhelmed by our life, Jesus will free us through prayer; counting on him.
 
