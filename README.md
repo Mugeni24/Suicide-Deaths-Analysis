@@ -299,10 +299,16 @@ Modularized code for reusability and added feature importance visualization:
 
 ### 4. Power BI Dashboard 📊✨
 
+1.  Download the `suicide_data.csv` file from this repository.
+2.  Open the `suicide_dashboard.pbix` file in Power BI Desktop.
+3.  If prompted, update the data source to point to the `suicide_data.csv` file on your local machine.
+
 #### **Objective**
 Deliver an intuitive platform for stakeholders to explore suicide trends interactively.
 
 ---
+
+
 
 #### **Dashboard Preview** 🛠️
 ![DASHBOARD2](https://github.com/user-attachments/assets/b8cb2817-7eed-4341-84f5-6fd500380c6e)
