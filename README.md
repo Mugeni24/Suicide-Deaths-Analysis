@@ -24,7 +24,7 @@ This project delivers a **cutting-edge analysis** of global suicide mortality tr
 ---
 
 ## 📊 Dataset Information
-- **Source**: [WHO Mortality Database](https://www.who.int/data/data-collection-tools/who-mortality-database) 🌐
+- **Source**: [WHO Mortality Database](https://data.who.int/countries/646) 🌐
 - **Coverage**: Global, with country-level granularity
 - **Time Period**: 2000–2022 (varies by country) 🕰️
 - **Format**: CSV / Excel 📑
