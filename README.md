@@ -39,7 +39,7 @@ This project delivers a **cutting-edge analysis** of global suicide mortality tr
 - **Python** 🐍: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Imbalanced-learn
 - **Jupyter Notebook (Google Colab)** 📓: For exploratory analysis and model development
 - **Power BI** 📊: For interactive, user-friendly dashboards
-- **Excel** 📈: For initial data inspection and preprocessing
+- **Excel sheet, csv** 📈: For initial data inspection and preprocessing
 
 ---
 
