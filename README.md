@@ -55,18 +55,24 @@ This section outlines a **systematic, reproducible workflow** executed in **Goog
     print(suicide_df.columns)
     suicide_df.info()
     ```
-    **Output**:
-    ![Sample Data](https://github.com/user-attachments/assets/7ed28496-577d-456a-a470-8bbf48da6df4)
-  - Removed irrelevant columns and handled missing values:
+**Output** 📊  
+[![Sample Data](https://github.com/user-attachments/assets/7ed28496-577d-456a-a470-8bbf48da6df4)](#)
+
+
+---
     ```python
     suicide_df = suicide_df.drop(columns=['RATE_PER_100000_N', 'RATE_PER_100000_NL', 'RATE_PER_100000_NU'])
     print(suicide_df.isnull().sum())
     suicide_df.dropna(inplace=True)
     suicide_df.info()
     ```
-    **Output**:
-    ![Cleaning Output](https://github.com/user-attachments/assets/b4dc8cff-b676-4d8a-9670-a10a8ea99b71)
-  - Standardized column names and optimized the dataset for efficiency.
+**Output** 📊  
+[![Cleaning Output](https://github.com/user-attachments/assets/b4dc8cff-b676-4d8a-9670-a10a8ea99b71)](#)
+
+---
+
+**Standardized column names and optimized the dataset for efficiency** ✅
+
 
 ### 2. Exploratory Data Analysis (EDA) 📈
 - **Objective**: Reveal trends, patterns, and relationships through statistical summaries and visualizations.
@@ -103,13 +109,17 @@ This section outlines a **systematic, reproducible workflow** executed in **Goog
     plt.title('Correlation Heatmap of Numerical Features')
     plt.show()
     ```
-    **Output**:
-    - Gender Distribution:
-      ![Gender Distribution](https://github.com/user-attachments/assets/9031f9cf-48c0-4dac-9f29-85aa52c51e7d)
-    - Correlation Heatmap:
-      ![Correlation Heatmap](https://github.com/user-attachments/assets/ec91ce7c-c39f-415c-a721-56a39fd63571)
-    - Trend Over Time:
-      ![Trend Over Time](https://github.com/user-attachments/assets/46a7b2ae-4001-4c6e-a6f1-304c1ddafd48)
+**Output Visualizations** 📊
+
+1. **Gender Distribution**  
+   [![Gender Distribution](https://github.com/user-attachments/assets/9031f9cf-48c0-4dac-9f29-85aa52c51e7d)](#)
+
+2. **Correlation Heatmap**  
+   [![Correlation Heatmap](https://github.com/user-attachments/assets/ec91ce7c-c39f-415c-a721-56a39fd63571)](#)
+
+3. **Trend Over Time**  
+   [![Trend Over Time](https://github.com/user-attachments/assets/46a7b2ae-4001-4c6e-a6f1-304c1ddafd48)](#)
+
 
 ### 3. Machine Learning Modeling 🤖
 - **Objective**: Develop predictive models to identify key factors influencing suicide risk.
@@ -173,40 +183,49 @@ This section outlines a **systematic, reproducible workflow** executed in **Goog
     plt.ylabel('True Label')
     plt.show()
     ```
-    **Output**:
-    ![Improved Model Results](https://github.com/user-attachments/assets/dd81414d-74c9-4e56-8d12-5f5eb2c07c66)
-- **Addressing Class Imbalance**:
-  - Applied **SMOTE** to balance the dataset and improve performance:
-    ```python
-    from imblearn.over_sampling import SMOTE
+**Output** 📊  
+[![Improved Model Results](https://github.com/user-attachments/assets/dd81414d-74c9-4e56-8d12-5f5eb2c07c66)](#)
 
-    smote = SMOTE(random_state=42)
-    X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
-    smote_model = RandomForestClassifier(random_state=42)
-    smote_model.fit(X_train_resampled, y_train_resampled)
-    y_pred_smote = smote_model.predict(X_test)
-    accuracy_smote = accuracy_score(y_test, y_pred_smote)
+---
 
-    print(f"SMOTE Model Accuracy: {accuracy_smote}")
-    print("\nClassification Report:")
-    report_smote = classification_report(y_test, y_pred_smote, target_names=le.classes_)
-    print(report_smote)
+### **Addressing Class Imbalance** ⚖️  
+Applied **SMOTE** to balance the dataset and improve performance.
 
-    conf_matrix_smote = confusion_matrix(y_test, y_pred_smote)
-    plt.figure(figsize=(12, 10))
-    sns.heatmap(conf_matrix_smote, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
-    plt.title('SMOTE Model Confusion Matrix')
-    plt.xlabel('Predicted Label')
-    plt.ylabel('True Label')
-    plt.show()
-    ```
-    **Output**:
-    - SMOTE Accuracy and Classification Report:
-      ![SMOTE Results](https://github.com/user-attachments/assets/1086a7cf-a0a8-41b4-b736-e523935d3ddf)
-    - SMOTE Confusion Matrix:
-      ![SMOTE Confusion Matrix](https://github.com/user-attachments/assets/72c3b22b-4742-491b-be5d-2053add9fa53)
-- **Code Refactoring & Innovation**:
-  - Modularized code for reusability and added feature importance visualization:
+```python
+from imblearn.over_sampling import SMOTE
+
+smote = SMOTE(random_state=42)
+X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+smote_model = RandomForestClassifier(random_state=42)
+smote_model.fit(X_train_resampled, y_train_resampled)
+y_pred_smote = smote_model.predict(X_test)
+accuracy_smote = accuracy_score(y_test, y_pred_smote)
+
+print(f"SMOTE Model Accuracy: {accuracy_smote}")
+print("\nClassification Report:")
+report_smote = classification_report(y_test, y_pred_smote, target_names=le.classes_)
+print(report_smote)
+
+conf_matrix_smote = confusion_matrix(y_test, y_pred_smote)
+plt.figure(figsize=(12, 10))
+sns.heatmap(conf_matrix_smote, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
+plt.title('SMOTE Model Confusion Matrix')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.show()
+
+```
+**Output** 📊  
+
+- **SMOTE Accuracy and Classification Report**  
+[![SMOTE Results](https://github.com/user-attachments/assets/1086a7cf-a0a8-41b4-b736-e523935d3ddf)](#)  
+
+- **SMOTE Confusion Matrix**  
+[![SMOTE Confusion Matrix](https://github.com/user-attachments/assets/72c3b22b-4742-491b-be5d-2053add9fa53)](#)  
+
+### **Code Refactoring & Innovation**:
+Modularized code for reusability and added feature importance visualization:
+    
     ```python
     import pandas as pd
     import numpy as np
@@ -269,45 +288,78 @@ This section outlines a **systematic, reproducible workflow** executed in **Goog
         target = 'DIM_AGE'
         model = train_and_evaluate_model(df, features, target)
     ```
-    **Output**:
-    - Classification Report and Confusion Matrix:
-      ![Improved Accuracy](https://github.com/user-attachments/assets/8bf39878-84b5-4486-a5ca-182a40c000ec)
-      ![Confusion Matrix](https://github.com/user-attachments/assets/a4506b93-4199-4dfd-94a0-0f76c1602d35)
-    - Feature Importance:
-      ![Feature Importance](https://github.com/user-attachments/assets/79d4e0e2-51bf-4d77-bdb1-f7dcdf92c5c2)
+**Output** 📊  
+
+- **Classification Report and Confusion Matrix**  
+[![Improved Accuracy](https://github.com/user-attachments/assets/8bf39878-84b5-4486-a5ca-182a40c000ec)](#)  
+[![Confusion Matrix](https://github.com/user-attachments/assets/a4506b93-4199-4dfd-94a0-0f76c1602d35)](#)  
+
+- **Feature Importance**  
+[![Feature Importance](https://github.com/user-attachments/assets/79d4e0e2-51bf-4d77-bdb1-f7dcdf92c5c2)](#)  
 
 ### 4. Power BI Dashboard 📊✨
-- **Objective**: Deliver an intuitive platform for stakeholders to explore suicide trends interactively.
-- **DASHBOARD** 🛠️
-    - <img width="769" height="435" alt="DASHBOARD2" src="https://github.com/user-attachments/assets/b8cb2817-7eed-4341-84f5-6fd500380c6e" />
 
-- **Process**:
-  - Imported the cleaned dataset into **Power BI**.
-  - Designed a visually engaging dashboard featuring:
-    - A **geographic map** 🌍 to highlight regional patterns
-      -<img width="543" height="284" alt="Map" src="https://github.com/user-attachments/assets/b5b3c0b6-5558-4cf9-b398-d6f628870363" />
+#### **Objective**
+Deliver an intuitive platform for stakeholders to explore suicide trends interactively.
 
-    - 📈 **line chart to track records by time**:
-    - This  allows us to see if the number of suicide mortality records is increasing, decreasing, or staying the same over time. This can help us to identify long-term trends and patterns. It can help us to detect any unusual spikes or dips in the data that might warrant further investigation. For example, a sudden increase in the number of records in a particular year could be due to a major event, such as an economic crisis or a natural disaster.
-    - <img width="385" height="277" alt="trends over time" src="https://github.com/user-attachments/assets/a886ab68-39fb-4006-a59c-54fa7fe06909" />
- 
-  - **Stacked bar chart to make a proportional breakdown by age group and sex**:
-  -  This chart takes us a step deeper. It asks, "Of all the females who die by suicide, what percentage are young, what percentage are middle-aged, and what percentage are elderly?" and then it asks the same question for males.
-  -  <img width="370" height="323" alt="proportional breakdown" src="https://github.com/user-attachments/assets/dac7b56e-9e11-43a7-9c26-f673b8685314" />
+---
 
-   - **Ribbon chart to make records according to time and sex**:
-   - We created a chart showing the number of suicide mortality records over time, broken down by sex, we were performing a trend analysis to compare the suicide mortality patterns of males and females over the years.
-   - <img width="500" height="342" alt="ribbon" src="https://github.com/user-attachments/assets/00c8e334-1389-4322-8551-84bd28d7c523" />
+#### **Dashboard Preview** 🛠️
+![DASHBOARD2](https://github.com/user-attachments/assets/b8cb2817-7eed-4341-84f5-6fd500380c6e)
 
+---
 
-- **Slicers and filters** 🛠️ for dynamic, user-driven exploration.
-    - Here's a filter that filters countries starting with letter a only whereby the funnal visual as well help us see by sex as we click on it:
-      - <img width="958" height="494" alt="filter" src="https://github.com/user-attachments/assets/f02f5739-75de-4b39-a9ea-180454e4f0af" />
-    - There is also a slicer for easy interaction in the overall dashboard
-    - <img width="764" height="505" alt="DASHBOARD" src="https://github.com/user-attachments/assets/5b2c38a2-6880-4fa7-b18c-f922efab18a4" />
+#### **Process**
+1. **Imported the cleaned dataset** into **Power BI**.
+2. **Designed a visually engaging dashboard** featuring:
 
+---
 
+##### **Geographic Map** 🌍  
+Highlights regional patterns.  
+![Map](https://github.com/user-attachments/assets/b5b3c0b6-5558-4cf9-b398-d6f628870363)
 
+---
+
+##### **Line Chart – Track Records by Time** 📈  
+- This allows us to see if the number of suicide mortality records is increasing, decreasing, or staying the same over time.  
+- Helps identify long-term trends and patterns.  
+- Detects unusual spikes or dips in the data that might warrant further investigation.  
+- For example, a sudden increase in the number of records in a particular year could be due to a major event, such as an economic crisis or a natural disaster.  
+
+![Trends Over Time](https://github.com/user-attachments/assets/a886ab68-39fb-4006-a59c-54fa7fe06909)
+
+---
+
+##### **Stacked Bar Chart – Proportional Breakdown by Age Group and Sex**  
+- This chart takes us a step deeper.  
+- It asks:  
+  > "Of all the females who die by suicide, what percentage are young, what percentage are middle-aged, and what percentage are elderly?"  
+  and then it asks the same question for males.  
+
+![Proportional Breakdown](https://github.com/user-attachments/assets/dac7b56e-9e11-43a7-9c26-f673b8685314)
+
+---
+
+##### **Ribbon Chart – Records by Time and Sex**  
+- Shows the number of suicide mortality records over time, broken down by sex.  
+- Performs a **trend analysis** to compare the suicide mortality patterns of males and females over the years.  
+
+![Ribbon Chart](https://github.com/user-attachments/assets/00c8e334-1389-4322-8551-84bd28d7c523)
+
+---
+
+#### **Slicers and Filters** 🛠️
+- **Filter Example**:  
+  - Filters countries starting with the letter **A** only.  
+  - The funnel visual also helps us see the breakdown by sex when we click on it.  
+
+![Filter](https://github.com/user-attachments/assets/f02f5739-75de-4b39-a9ea-180454e4f0af)
+
+- **Additional Slicer**:  
+  - Allows for easy interaction in the overall dashboard.  
+
+![Dashboard Slicer](https://github.com/user-attachments/assets/5b2c38a2-6880-4fa7-b18c-f922efab18a4)
 
 ---
 
