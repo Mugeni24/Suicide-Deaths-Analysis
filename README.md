@@ -396,6 +396,18 @@ This project represents a **transformative contribution** to global suicide mort
 
 ---
 
+## 📦 Deliverables
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TiexRcSkms8l-liOgfcWZpqyzkSadmUy?authuser=0#scrollTo=9d65dd40)
+- 📊 **Power BI Dashboard**: Interactive `suicide.pbix` file
+- 📁 **Dataset**: Raw dataset `RELAY_WHS.csv`  
+- 📁 **Dataset**: Cleaned dataset `suicide_data.csv`  
+- 📓 **Jupyter Notebook**: Python code for data processing and visualization  
+- 📄 **README**: This detailed documentation  
+- 🌐 **GitHub Repository**: Public repository.
+
+
+---
+
 ## 🙏 Reflective Verse
 *"Come unto me, all ye that labour and are heavy laden, and I will give you rest."*  
 — Matthew 11:28
@@ -406,3 +418,14 @@ This verse inspires hope and compassion from Jesus Christ our Lord and saviour, 
 
 ## 💪 Encouragement
 This project is meant to illuminate the path toward meaningful change. Let this work inspire you to continue harnessing data for good, driving innovation, and making a lasting impact on global mental health. Keep shining!
+
+
+
+
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
