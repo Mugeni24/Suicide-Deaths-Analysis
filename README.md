@@ -312,7 +312,7 @@ Deliver an intuitive platform for stakeholders to explore suicide trends interac
 
 
 #### **Dashboard Preview** 🛠️
-![DASHBOARD2](https://github.com/user-attachments/assets/b8cb2817-7eed-4341-84f5-6fd500380c6e)
+<img width="760" height="488" alt="dashboard 3" src="https://github.com/user-attachments/assets/8ff0d81a-e2b0-488a-b205-508d32f6a79d" />
 
 ---
 
